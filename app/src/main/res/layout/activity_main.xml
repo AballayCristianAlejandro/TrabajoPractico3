@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvdolares"
+        android:layout_width="190dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:text="DOLARES"
+        android:textColor="#0D30ED"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dolares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#0E2EE3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdolares" />
+
+    <TextView
+        android:id="@+id/tveuros"
+        android:layout_width="190dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="EUROS
+"
+        android:textColor="#0E2DDA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dolares" />
+
+    <EditText
+        android:id="@+id/euros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#0C2CDC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tveuros" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/tvresultado"
+        android:layout_width="372dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:textColor="#1A32BA"
+        app:layout_constraintTop_toBottomOf="@+id/rtGrupo"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/covertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Convertir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvresultado" />
+
+    <RadioGroup
+        android:id="@+id/rtGrupo"
+        android:layout_width="203dp"
+        android:layout_height="115dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/euros">
+
+        <RadioButton
+            android:id="@+id/rteurosadolares"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="Euros a Dolares"
+            android:textColor="#1535E4"
+            app:layout_constraintTop_toBottomOf="@+id/euros" />
+
+        <RadioButton
+            android:id="@+id/rtdolaresaeuros"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="Dolares a Euros"
+            android:textColor="#1533DD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rteurosadolares" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
